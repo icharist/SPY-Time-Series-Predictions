@@ -117,9 +117,11 @@ def calculate_returns(close):
     returns : DataFrame
         Returns for each ticker and date
     """
-    # TODO: Implement Function
-    
+    #Is This Wrong ? Lots of places to chop the day in parts
+
     return (close - close.shift(1))/close.shift(1)
+    #Another way
+    #return ((close - open))/open)
 
 
 def resample_prices(close_prices, freq='M'):
